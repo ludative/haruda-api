@@ -1,0 +1,67 @@
+{
+  "name": "haruda-api",
+  "version": "0.0.1",
+  "description": "sharing dairy",
+  "author": {
+    "name": "kkangil",
+    "email": "kkangil94@naver.com",
+    "url": "https://github.com/kkangil"
+  },
+  "repository": "https://github.com/kkangil/haruda-api",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "nodemon -r esm src/app.js",
+    "deploy": "pm2 start ecosystem.config.js --env production",
+    "deploy-public": "pm2 start ecosystem.config.js --env public-develop"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --no-semi --single-quote --write --prose-wrap never",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "aws-sdk": "^2.422.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^7.0.0",
+    "esm": "^3.2.15",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security",
+    "jimp": "^0.2.28",
+    "jsonwebtoken": "^8.5.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "multer-s3": "^2.9.0",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.43.0"
+  },
+  "devDependencies": {
+    "lint-staged": "^7.0.0",
+    "prettier": "1.11.1"
+  },
+  "keywords": [
+    "express",
+    "sequelize",
+    "boilerplate",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "esm",
+    "ECMAScript Module"
+  ]
+}
